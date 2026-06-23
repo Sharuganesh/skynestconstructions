@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Sky Nest Constructions" },
+      { name: "description", content: "Sky Nest Interiors offers comprehensive construction and interior design services, specializing in modern, luxury, and custom spaces." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Sky Nest Constructions" },
+      { property: "og:description", content: "Sky Nest Interiors offers comprehensive construction and interior design services, specializing in modern, luxury, and custom spaces." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Sky Nest Constructions" },
+      { name: "twitter:description", content: "Sky Nest Interiors offers comprehensive construction and interior design services, specializing in modern, luxury, and custom spaces." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d4bb221e-2a59-43e3-8fc1-6fb693110380/id-preview-ad8672f5--655f188d-bb07-425d-b33c-9172d06389c9.lovable.app-1782224340889.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d4bb221e-2a59-43e3-8fc1-6fb693110380/id-preview-ad8672f5--655f188d-bb07-425d-b33c-9172d06389c9.lovable.app-1782224340889.png" },
     ],
     links: [
       {
