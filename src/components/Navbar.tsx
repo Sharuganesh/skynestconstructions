@@ -35,16 +35,21 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
-        <Link
-          to="/"
-          className="flex min-w-0 items-center gap-2 rounded-full bg-background/70 px-2 py-1 shadow-soft backdrop-blur-md sm:gap-3 sm:px-3 sm:py-1.5"
-        >
-          <img src={logo.url} alt="Sky Nest Constructions" className="h-9 w-9 shrink-0 object-contain sm:h-11 sm:w-11" />
+        <Link to="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
+          <img src={logo.url} alt="Sky Nest Constructions" className="h-9 w-9 shrink-0 object-contain drop-shadow-md sm:h-11 sm:w-11" />
           <div className="flex min-w-0 flex-col leading-tight">
-            <span className="font-[Playfair_Display] text-base font-bold text-primary sm:text-lg">
+            <span
+              className={`font-[Playfair_Display] text-base font-bold transition-colors sm:text-lg ${
+                scrolled ? "text-primary" : "text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.45)]"
+              }`}
+            >
               Sky Nest
             </span>
-            <span className="text-[9px] uppercase tracking-[0.18em] text-muted-foreground sm:text-[10px] sm:tracking-[0.2em]">
+            <span
+              className={`text-[9px] uppercase tracking-[0.18em] transition-colors sm:text-[10px] sm:tracking-[0.2em] ${
+                scrolled ? "text-muted-foreground" : "text-white/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+              }`}
+            >
               Build with Trust
             </span>
           </div>
