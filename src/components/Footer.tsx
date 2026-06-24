@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
+import { PhoneIcon, GmailIcon, WhatsAppIcon, MapPinIcon, InstagramIcon } from "./BrandIcons";
 import logo from "@/assets/logo.asset.json";
 
 export function Footer() {
@@ -43,17 +44,18 @@ export function Footer() {
           <div>
             <h4 className="font-[Playfair_Display] text-lg font-semibold">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-white/80">
-              <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 shrink-0" /><a href="tel:+918778758472">+91 87787 58472</a></li>
-              <li className="flex gap-3"><MessageCircle className="h-4 w-4 mt-0.5 shrink-0" /><a href="https://wa.me/918778758472">WhatsApp Chat</a></li>
-              <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 shrink-0" /><a href="mailto:skynestconstructions@gmail.com" className="break-all">skynestconstructions@gmail.com</a></li>
-              <li className="flex gap-3"><Clock className="h-4 w-4 mt-0.5 shrink-0" /> Open 24 / 7</li>
+              <li className="flex gap-3"><PhoneIcon className="h-4 w-4 mt-0.5 shrink-0 text-primary-glow" /><a href="tel:+918778758472" className="hover:text-primary-glow transition">+91 87787 58472</a></li>
+              <li className="flex gap-3"><WhatsAppIcon className="h-4 w-4 mt-0.5 shrink-0 text-[#25D366]" /><a href="https://wa.me/918778758472" className="hover:text-primary-glow transition">WhatsApp Chat</a></li>
+              <li className="flex gap-3"><GmailIcon className="h-4 w-4 mt-0.5 shrink-0" /><a href="mailto:skynestconstructions@gmail.com" className="break-all hover:text-primary-glow transition">skynestconstructions@gmail.com</a></li>
+              <li className="flex gap-3"><InstagramIcon className="h-4 w-4 mt-0.5 shrink-0" /><a href="https://instagram.com" className="hover:text-primary-glow transition">@skynestconstructions</a></li>
+              <li className="flex gap-3"><Clock className="h-4 w-4 mt-0.5 shrink-0 text-primary-glow" /> Open 24 / 7</li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-[Playfair_Display] text-lg font-semibold">Visit Us</h4>
             <a href="https://maps.app.goo.gl/RpqxK5x585aUFD3CA?g_st=ac" target="_blank" rel="noreferrer" className="mt-4 flex gap-3 text-sm text-white/80 hover:text-primary-glow">
-              <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+              <MapPinIcon className="h-4 w-4 mt-0.5 shrink-0 text-primary-glow" />
               <span>No.184-A, Ganapathiyapuram Street, Seevalaperi Main Road, Palayamkottai</span>
             </a>
             <p className="mt-4 text-xs uppercase tracking-widest text-white/60">Serving all over India</p>
