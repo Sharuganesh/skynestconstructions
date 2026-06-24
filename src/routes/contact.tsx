@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail, MapPin, MessageCircle, Phone, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Clock, Send, CheckCircle2 } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { PhoneIcon, GmailIcon, WhatsAppIcon, MapPinIcon } from "@/components/BrandIcons";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -116,11 +117,11 @@ function ContactForm() {
 
 function ContactInfo() {
   const items = [
-    { icon: Phone, label: "Call us", value: "+91 87787 58472", href: "tel:+918778758472" },
-    { icon: MessageCircle, label: "WhatsApp", value: "Chat now", href: "https://wa.me/918778758472" },
-    { icon: Mail, label: "Email", value: "skynestconstructions@gmail.com", href: "mailto:skynestconstructions@gmail.com" },
-    { icon: MapPin, label: "Studio", value: "No.184-A, Ganapathiyapuram Street, Seevalaperi Main Road, Palayamkottai", href: "https://maps.app.goo.gl/RpqxK5x585aUFD3CA?g_st=ac" },
-    { icon: Clock, label: "Working hours", value: "Open 24 / 7" },
+    { icon: PhoneIcon, label: "Call us", value: "+91 87787 58472", href: "tel:+918778758472", tint: "bg-[#1f6feb] text-white" },
+    { icon: WhatsAppIcon, label: "WhatsApp", value: "Chat now", href: "https://wa.me/918778758472", tint: "bg-[#25D366] text-white" },
+    { icon: GmailIcon, label: "Email", value: "skynestconstructions@gmail.com", href: "mailto:skynestconstructions@gmail.com", tint: "bg-white text-[#EA4335] ring-1 ring-border" },
+    { icon: MapPinIcon, label: "Studio", value: "No.184-A, Ganapathiyapuram Street, Seevalaperi Main Road, Palayamkottai", href: "https://maps.app.goo.gl/RpqxK5x585aUFD3CA?g_st=ac", tint: "bg-[#EA4335] text-white" },
+    { icon: Clock, label: "Working hours", value: "Open 24 / 7", tint: "bg-gradient-brand text-primary-foreground" },
   ];
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-4">
@@ -131,7 +132,7 @@ function ContactInfo() {
           const Comp: any = it.href ? "a" : "div";
           return (
             <Comp key={it.label} href={it.href} target={it.href?.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="flex items-start gap-4 rounded-2xl bg-card p-5 shadow-soft transition hover:-translate-y-0.5 hover:shadow-elegant">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
+              <div className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${it.tint}`}>
                 <it.icon className="h-5 w-5" />
               </div>
               <div className="min-w-0">
