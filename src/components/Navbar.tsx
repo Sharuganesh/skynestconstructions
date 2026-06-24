@@ -35,13 +35,16 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
-        <Link to="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
-          <img src={logo.url} alt="Sky Nest Constructions" className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12" />
+        <Link
+          to="/"
+          className="flex min-w-0 items-center gap-2 rounded-full bg-background/70 px-2 py-1 shadow-soft backdrop-blur-md sm:gap-3 sm:px-3 sm:py-1.5"
+        >
+          <img src={logo.url} alt="Sky Nest Constructions" className="h-9 w-9 shrink-0 object-contain sm:h-11 sm:w-11" />
           <div className="flex min-w-0 flex-col leading-tight">
-            <span className={`font-[Playfair_Display] text-base font-bold sm:text-lg ${scrolled ? "text-primary" : "text-white drop-shadow"}`}>
+            <span className="font-[Playfair_Display] text-base font-bold text-primary sm:text-lg">
               Sky Nest
             </span>
-            <span className={`text-[9px] uppercase tracking-[0.18em] sm:text-[10px] sm:tracking-[0.2em] ${scrolled ? "text-muted-foreground" : "text-white/80"}`}>
+            <span className="text-[9px] uppercase tracking-[0.18em] text-muted-foreground sm:text-[10px] sm:tracking-[0.2em]">
               Build with Trust
             </span>
           </div>
