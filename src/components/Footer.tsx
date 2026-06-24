@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Clock } from "lucide-react";
-import { PhoneIcon, GmailIcon, WhatsAppIcon, MapPinIcon, InstagramIcon } from "./BrandIcons";
+import { PhoneIcon, GmailIcon, WhatsAppIcon, MapPinIcon } from "./BrandIcons";
 import logo from "@/assets/logo.asset.json";
 
 export function Footer() {
@@ -47,7 +47,6 @@ export function Footer() {
               <li className="flex gap-3"><PhoneIcon className="h-4 w-4 mt-0.5 shrink-0 text-primary-glow" /><a href="tel:+918778758472" className="hover:text-primary-glow transition">+91 87787 58472</a></li>
               <li className="flex gap-3"><WhatsAppIcon className="h-4 w-4 mt-0.5 shrink-0 text-[#25D366]" /><a href="https://wa.me/918778758472" className="hover:text-primary-glow transition">WhatsApp Chat</a></li>
               <li className="flex gap-3"><GmailIcon className="h-4 w-4 mt-0.5 shrink-0" /><a href="mailto:skynestconstructions@gmail.com" className="break-all hover:text-primary-glow transition">skynestconstructions@gmail.com</a></li>
-              <li className="flex gap-3"><InstagramIcon className="h-4 w-4 mt-0.5 shrink-0" /><a href="https://instagram.com" className="hover:text-primary-glow transition">@skynestconstructions</a></li>
               <li className="flex gap-3"><Clock className="h-4 w-4 mt-0.5 shrink-0 text-primary-glow" /> Open 24 / 7</li>
             </ul>
           </div>
