@@ -1,6 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { motion, useScroll } from "framer-motion";
+import { PhoneIcon } from "./BrandIcons";
 import logo from "@/assets/logo.asset.json";
 
 const links = [
@@ -15,6 +17,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { location } = useRouterState();
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -32,11 +35,15 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo.url} alt="Sky Nest Constructions" className="h-12 w-12 object-contain" />
-          <div className="hidden flex-col leading-tight sm:flex">
-            <span className="font-[Playfair_Display] text-lg font-bold text-primary">Sky Nest</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Build with Trust</span>
+        <Link to="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
+          <img src={logo.url} alt="Sky Nest Constructions" className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12" />
+          <div className="flex min-w-0 flex-col leading-tight">
+            <span className={`font-[Playfair_Display] text-base font-bold sm:text-lg ${scrolled ? "text-primary" : "text-white drop-shadow"}`}>
+              Sky Nest
+            </span>
+            <span className={`text-[9px] uppercase tracking-[0.18em] sm:text-[10px] sm:tracking-[0.2em] ${scrolled ? "text-muted-foreground" : "text-white/80"}`}>
+              Build with Trust
+            </span>
           </div>
         </Link>
 
@@ -56,18 +63,23 @@ export function Navbar() {
             href="tel:+918778758472"
             className="ml-3 inline-flex items-center gap-2 rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant transition hover:scale-105"
           >
-            <Phone className="h-4 w-4" /> Call Now
+            <PhoneIcon className="h-4 w-4" /> Call Now
           </a>
         </nav>
 
         <button
           onClick={() => setOpen(!open)}
-          className="rounded-full bg-card p-2 shadow-soft lg:hidden"
+          className="shrink-0 rounded-full bg-card p-2 shadow-soft lg:hidden"
           aria-label="Menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
+
+      <motion.div
+        style={{ scaleX: scrollYProgress }}
+        className="h-[2px] origin-left bg-gradient-brand"
+      />
 
       {open && (
         <div className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border">
@@ -87,7 +99,7 @@ export function Navbar() {
               href="tel:+918778758472"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-5 py-3 font-semibold text-primary-foreground"
             >
-              <Phone className="h-4 w-4" /> Call 8778758472
+              <PhoneIcon className="h-4 w-4" /> Call 8778758472
             </a>
           </div>
         </div>
