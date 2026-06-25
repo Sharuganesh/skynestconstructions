@@ -12,7 +12,10 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Talk to Sky Nest Constructions. Call, WhatsApp or send us a message for a free interior or construction consultation. Available 24/7 across India." },
       { property: "og:title", content: "Contact Sky Nest Constructions" },
       { property: "og:description", content: "Reach Sky Nest by phone, WhatsApp or contact form. Free consultations within 24 hours." },
+      { property: "og:url", content: "https://skynestconstructions.in/contact" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://skynestconstructions.in/contact" }],
   }),
   component: ContactPage,
 });

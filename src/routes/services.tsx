@@ -11,7 +11,10 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Explore Sky Nest's 16 specialities: modular kitchens, wardrobes, false ceilings, 3D design, renovations, electrical, plumbing & more. Premium build quality across India." },
       { property: "og:title", content: "Sky Nest Services — End-to-end Construction & Interior" },
       { property: "og:description", content: "16 specialised disciplines under one accountable roof. From modular kitchens to commercial fit-outs." },
+      { property: "og:url", content: "https://skynestconstructions.in/services" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://skynestconstructions.in/services" }],
   }),
   component: ServicesPage,
 });

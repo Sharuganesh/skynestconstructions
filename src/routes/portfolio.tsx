@@ -12,7 +12,10 @@ export const Route = createFileRoute("/portfolio")({
       { name: "description", content: "Browse Sky Nest's portfolio: living rooms, modular kitchens, bedrooms, offices and commercial fit-outs delivered across South India." },
       { property: "og:title", content: "Sky Nest Portfolio — Delivered Projects" },
       { property: "og:description", content: "Photo-real projects, real handovers. Explore Sky Nest's delivered interiors and constructions." },
+      { property: "og:url", content: "https://skynestconstructions.in/portfolio" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://skynestconstructions.in/portfolio" }],
   }),
   component: PortfolioPage,
 });
