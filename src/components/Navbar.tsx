@@ -39,16 +39,12 @@ export function Navbar() {
           <img src={logo.url} alt="Sky Nest Constructions" className="h-9 w-9 shrink-0 object-contain drop-shadow-md sm:h-11 sm:w-11" />
           <div className="flex min-w-0 flex-col leading-tight">
             <span
-              className={`font-[Playfair_Display] text-base font-bold transition-colors sm:text-lg ${
-                scrolled ? "text-primary" : "text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.45)]"
-              }`}
+              className="font-[Playfair_Display] text-base font-bold text-primary [text-shadow:0_1px_12px_rgba(255,255,255,0.55)] sm:text-lg"
             >
               Sky Nest
             </span>
             <span
-              className={`text-[9px] uppercase tracking-[0.18em] transition-colors sm:text-[10px] sm:tracking-[0.2em] ${
-                scrolled ? "text-muted-foreground" : "text-white/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
-              }`}
+              className="text-[9px] font-semibold uppercase tracking-[0.18em] text-primary-deep/80 [text-shadow:0_1px_8px_rgba(255,255,255,0.65)] sm:text-[10px] sm:tracking-[0.2em]"
             >
               Build with Trust
             </span>

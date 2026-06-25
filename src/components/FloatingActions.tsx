@@ -8,18 +8,16 @@ export function FloatingActions() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group inline-flex items-center gap-2 rounded-full bg-[#25D366] py-3 pl-3 pr-5 text-white shadow-elegant transition hover:scale-105"
+        className="grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-elegant ring-4 ring-[#25D366]/20 transition hover:scale-110"
       >
         <WhatsAppIcon className="h-7 w-7" />
-        <span className="hidden text-sm font-semibold sm:inline">Free Quote</span>
       </a>
       <a
         href="tel:+918778758472"
         aria-label="Call Sky Nest"
-        className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand py-3 pl-3 pr-5 text-primary-foreground shadow-elegant transition hover:scale-105"
+        className="grid h-14 w-14 place-items-center rounded-full bg-gradient-brand text-primary-foreground shadow-elegant ring-4 ring-primary/20 transition hover:scale-110"
       >
         <PhoneIcon className="h-6 w-6" />
-        <span className="hidden text-sm font-semibold sm:inline">Call Now</span>
       </a>
     </div>
   );
