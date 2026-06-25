@@ -11,7 +11,10 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Founded by Arunraj Krishnan, Sky Nest Constructions blends 16+ years of expertise with sustainable, customer-centric design. Discover our story, values and team." },
       { property: "og:title", content: "About Sky Nest Constructions" },
       { property: "og:description", content: "Premium, sustainable construction & interior services across India. Meet the studio behind 'Build with Trust'." },
+      { property: "og:url", content: "https://skynestconstructions.in/about" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://skynestconstructions.in/about" }],
   }),
   component: AboutPage,
 });
