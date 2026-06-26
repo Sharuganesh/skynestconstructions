@@ -14,6 +14,12 @@
   },
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/__l5e/:path*",
+      "destination": "https://skynestconstructions.lovable.app/__l5e/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
