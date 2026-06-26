@@ -8,14 +8,43 @@ import { ArrowRight, X } from "lucide-react";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio | Sky Nest Constructions — Interior & Build Projects" },
-      { name: "description", content: "Browse Sky Nest's portfolio: living rooms, modular kitchens, bedrooms, offices and commercial fit-outs delivered across South India." },
-      { property: "og:title", content: "Sky Nest Portfolio — Delivered Projects" },
-      { property: "og:description", content: "Photo-real projects, real handovers. Explore Sky Nest's delivered interiors and constructions." },
+      { title: "Interior Design Portfolio — Projects in Tirunelveli & Tamil Nadu | Sky Nest" },
+      { name: "description", content: "View Sky Nest Constructions' portfolio of completed interior design and construction projects in Tirunelveli, Palayamkottai and Tamil Nadu — modular kitchens, bedrooms, offices, living rooms and more." },
+      { property: "og:title", content: "Sky Nest Portfolio — Interior Projects in Tirunelveli, Tamil Nadu" },
+      { property: "og:description", content: "Real handovers. Modular kitchens, bedrooms, offices, commercial interiors delivered across Tirunelveli & Tamil Nadu." },
       { property: "og:url", content: "https://skynestconstructions.in/portfolio" },
-      { property: "og:type", content: "website" },
+      { name: "keywords", content: "interior design portfolio tirunelveli, modular kitchen portfolio tamil nadu, home interior design photos tirunelveli, interior design before after tirunelveli" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/portfolio" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://skynestconstructions.in/" },
+            { "@type": "ListItem", position: 2, name: "Portfolio", item: "https://skynestconstructions.in/portfolio" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Sky Nest Constructions — Completed Interior Design Projects",
+          description: "Portfolio of interior design and construction projects completed in Tirunelveli and Tamil Nadu by Sky Nest Constructions",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Sky Loft Residence — Living Room Interior, Tirunelveli" },
+            { "@type": "ListItem", position: 2, name: "Maple Modular Kitchen — Tirunelveli" },
+            { "@type": "ListItem", position: 3, name: "Cove-Lit Master Suite — Bedroom Interior, Tamil Nadu" },
+            { "@type": "ListItem", position: 4, name: "Heritage Office Loft — Office Interior, Tirunelveli" },
+            { "@type": "ListItem", position: 5, name: "Velvet Lounge Lobby — Commercial Interior, Tamil Nadu" },
+          ],
+        }),
+      },
+    ],
   }),
   component: PortfolioPage,
 });

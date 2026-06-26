@@ -9,18 +9,82 @@ import { services, portfolio, testimonials } from "@/lib/site-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sky Nest Constructions — Build with Trust | Construction & Interior" },
-      { name: "description", content: "Sky Nest Constructions delivers premium construction and interior design across India. Modular kitchens, wardrobes, false ceilings, 3D design, renovations and more. Build with Trust." },
-      { property: "og:title", content: "Sky Nest Constructions — Build with Trust" },
-      { property: "og:description", content: "Premium construction & interior craftsmanship. 16+ years of expertise, modern & sustainable design. Serving all over India." },
+      { title: "Best Interior Designer & Construction Company in Tirunelveli | Sky Nest Constructions" },
+      { name: "description", content: "Sky Nest Constructions — #1 interior design & construction company in Tirunelveli, Palayamkottai & all Tamil Nadu. Modular kitchens, wardrobes, false ceilings, 3D design, home renovation. Free consultation. Call +91 87787 58472." },
+      { property: "og:title", content: "Best Interior Designer in Tirunelveli | Sky Nest Constructions" },
+      { property: "og:description", content: "Premium interior design & construction in Tirunelveli & Tamil Nadu. Modular kitchens, wardrobes, 3D design, renovation. 120+ happy clients. Free consultation." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://skynestconstructions.in/" },
-      { property: "og:image", content: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=75" },
-      { name: "twitter:image", content: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=75" },
-      { name: "twitter:title", content: "Sky Nest Constructions — Build with Trust" },
-      { name: "twitter:description", content: "Premium construction & interior craftsmanship across India." },
+      { property: "og:image", content: "https://skynestconstructions.in/og-home.jpg" },
+      { name: "twitter:image", content: "https://skynestconstructions.in/og-home.jpg" },
+      { name: "twitter:title", content: "Best Interior Designer in Tirunelveli | Sky Nest Constructions" },
+      { name: "twitter:description", content: "Premium construction & interior design across Tirunelveli & Tamil Nadu. 120+ happy clients. Free consultation." },
+      { name: "keywords", content: "interior designer tirunelveli, interior design palayamkottai, modular kitchen tirunelveli, construction company tirunelveli, home renovation tirunelveli, false ceiling tirunelveli, 3d interior design tirunelveli, wardrobe design tirunelveli, best interior designer tamil nadu, sky nest constructions" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/" }],
+    scripts: [
+      // BreadcrumbList for homepage
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://skynestconstructions.in/" },
+          ],
+        }),
+      },
+      // FAQ Schema — Homepage
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Who is the best interior designer in Tirunelveli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sky Nest Constructions, founded by Arunraj Krishnan, is widely regarded as one of the best interior design and construction companies in Tirunelveli and Palayamkottai, Tamil Nadu. With 16+ years of expertise and 120+ completed projects, they offer premium services including modular kitchens, wardrobes, false ceilings, 3D design, and home renovation.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Does Sky Nest Constructions offer free consultation?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Sky Nest Constructions offers a complimentary on-site or virtual consultation within 24 hours of enquiry. You can call +91 87787 58472, WhatsApp, or fill out the contact form at skynestconstructions.in.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What areas does Sky Nest Constructions serve in Tamil Nadu?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sky Nest Constructions is headquartered in Palayamkottai, Tirunelveli, and serves clients across Tamil Nadu including Nagercoil, Tenkasi, Thoothukudi, Madurai, Coimbatore, and Chennai.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What services does Sky Nest Constructions offer?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sky Nest Constructions offers 16 services: Modular Kitchen, Wardrobe Design, TV Unit Design, False Ceiling, Living Room Interiors, Bedroom Interiors, Office Interiors, Commercial Interiors, PVC Interiors, Wood Works, Wallpaper Installation, 3D Interior Design, Home Renovation, Electrical Works, Plumbing Works, and full Interior Design.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How much does interior design cost in Tirunelveli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Interior design cost in Tirunelveli varies by scope. Sky Nest Constructions provides transparent, itemised quotes after a free consultation. For a 2BHK home, modular kitchen and wardrobes can start from ₹2.5 lakhs. Contact Sky Nest at +91 87787 58472 for an accurate estimate.",
+              },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });
@@ -78,7 +142,7 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="mt-6 max-w-4xl text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
         >
-          Crafted spaces, <span className="text-primary-glow italic">built on trust.</span>
+          Tirunelveli's trusted <span className="text-primary-glow italic">interior designers.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -86,7 +150,7 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 max-w-2xl text-lg text-white/85 sm:text-xl"
         >
-          Sky Nest Constructions designs and builds premium homes, offices and commercial interiors across India — modern, sustainable, and meticulously detailed.
+          Sky Nest Constructions delivers premium home & office interiors across Tirunelveli, Palayamkottai and all of Tamil Nadu — modular kitchens, wardrobes, 3D design, renovation and more.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

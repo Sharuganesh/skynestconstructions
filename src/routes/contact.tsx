@@ -8,14 +8,27 @@ import { PhoneIcon, GmailIcon, WhatsAppIcon, MapPinIcon } from "@/components/Bra
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Sky Nest Constructions | Get a Free Quote" },
-      { name: "description", content: "Talk to Sky Nest Constructions. Call, WhatsApp or send us a message for a free interior or construction consultation. Available 24/7 across India." },
-      { property: "og:title", content: "Contact Sky Nest Constructions" },
-      { property: "og:description", content: "Reach Sky Nest by phone, WhatsApp or contact form. Free consultations within 24 hours." },
+      { title: "Contact Sky Nest Constructions | Free Interior Design Consultation in Tirunelveli" },
+      { name: "description", content: "Contact Sky Nest Constructions, Palayamkottai, Tirunelveli. Get a free interior design or construction consultation. Call +91 87787 58472 or WhatsApp. 24/7 availability across Tamil Nadu." },
+      { property: "og:title", content: "Contact Sky Nest Constructions — Tirunelveli" },
+      { property: "og:description", content: "Free interior design consultation in Tirunelveli. Call or WhatsApp +91 87787 58472. 24/7. Serving Tamil Nadu." },
       { property: "og:url", content: "https://skynestconstructions.in/contact" },
-      { property: "og:type", content: "website" },
+      { name: "keywords", content: "sky nest constructions contact, interior designer tirunelveli phone number, free interior design consultation tirunelveli, interior designer palayamkottai" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://skynestconstructions.in/" },
+            { "@type": "ListItem", position: 2, name: "Contact", item: "https://skynestconstructions.in/contact" },
+          ],
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });
@@ -29,10 +42,10 @@ function ContactPage() {
         <div className="relative mx-auto max-w-7xl px-5 text-center lg:px-8">
           <span className="text-xs uppercase tracking-[0.3em] text-primary-glow">Contact</span>
           <h1 className="mt-4 font-[Playfair_Display] text-5xl font-bold text-white sm:text-6xl">
-            Let's <span className="italic text-primary-glow">build together.</span>
+            Contact Us in <span className="italic text-primary-glow">Tirunelveli.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-white/90">
-            Share your idea — call, WhatsApp or drop a message. We respond within 24 hours, 365 days a year.
+            Visit our studio at Palayamkottai or reach us by call, WhatsApp or email. Free consultation for all projects across Tamil Nadu. We respond within 24 hours, 365 days a year.
           </p>
         </div>
       </section>
@@ -156,7 +169,7 @@ function MapSection() {
       <div className="overflow-hidden rounded-3xl shadow-elegant">
         <iframe
           title="Sky Nest location"
-          src="https://www.google.com/maps?q=Palayamkottai,+Tirunelveli&output=embed"
+          src="https://www.google.com/maps?q=No.184-A+Ganapathiyapuram+Street+Seevalaperi+Main+Road+Palayamkottai+Tirunelveli+627011&output=embed"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="h-[420px] w-full border-0"

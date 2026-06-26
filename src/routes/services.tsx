@@ -7,14 +7,79 @@ import { services } from "@/lib/site-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services | Sky Nest Constructions — Interior & Construction" },
-      { name: "description", content: "Explore Sky Nest's 16 specialities: modular kitchens, wardrobes, false ceilings, 3D design, renovations, electrical, plumbing & more. Premium build quality across India." },
-      { property: "og:title", content: "Sky Nest Services — End-to-end Construction & Interior" },
-      { property: "og:description", content: "16 specialised disciplines under one accountable roof. From modular kitchens to commercial fit-outs." },
+      { title: "Interior Design & Construction Services in Tirunelveli, Tamil Nadu | Sky Nest" },
+      { name: "description", content: "16 specialised interior design & construction services in Tirunelveli & Tamil Nadu: modular kitchen, wardrobe, false ceiling, 3D design, home renovation, office interiors, PVC panels, wood works, electrical & plumbing. Free consultation." },
+      { property: "og:title", content: "Interior Design Services in Tirunelveli | Sky Nest Constructions" },
+      { property: "og:description", content: "16 services under one roof: modular kitchen, wardrobe, false ceiling, renovation & more across Tamil Nadu." },
       { property: "og:url", content: "https://skynestconstructions.in/services" },
       { property: "og:type", content: "website" },
+      { name: "keywords", content: "modular kitchen tirunelveli, wardrobe design tirunelveli, false ceiling tirunelveli, interior design services tamil nadu, home renovation tirunelveli, 3d interior design tirunelveli, office interior designer tirunelveli, pvc interiors tirunelveli, wood works tirunelveli, electrical contractor tirunelveli" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/services" }],
+    scripts: [
+      // BreadcrumbList
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://skynestconstructions.in/" },
+            { "@type": "ListItem", position: 2, name: "Services", item: "https://skynestconstructions.in/services" },
+          ],
+        }),
+      },
+      // FAQ Schema for Services page
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What is the cost of a modular kitchen in Tirunelveli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Modular kitchen cost in Tirunelveli depends on layout, material, and size. At Sky Nest Constructions, a standard modular kitchen starts from approximately ₹1.5 lakhs. Contact us at +91 87787 58472 for a free, itemised quote.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Do you offer 3D interior design in Tirunelveli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes, Sky Nest Constructions provides photo-realistic 3D interior design visualisation for all projects in Tirunelveli and across Tamil Nadu, before any physical work begins, so clients can approve the design fully.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How long does a home renovation take with Sky Nest?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "A typical home renovation with Sky Nest Constructions takes 30–90 days depending on scope. We assign a dedicated project manager and provide weekly progress updates throughout the project.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Do you do false ceiling work in Tirunelveli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Sky Nest Constructions designs and installs false ceilings with integrated cove and accent lighting across Tirunelveli, Palayamkottai, Nagercoil, and all Tamil Nadu districts.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What types of wardrobe design do you offer?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sky Nest Constructions offers sliding, hinged, and walk-in wardrobe designs in wood, MDF, and PVC finishes, custom-built to maximize space for homes in Tirunelveli and Tamil Nadu.",
+              },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: ServicesPage,
 });
@@ -36,12 +101,12 @@ function Hero() {
       <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-primary-glow/30 blur-3xl" />
       <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-5 text-center lg:px-8">
-        <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-xs uppercase tracking-[0.3em] text-primary-glow">Our Services</motion.span>
+        <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-xs uppercase tracking-[0.3em] text-primary-glow">Services in Tirunelveli & Tamil Nadu</motion.span>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="mt-4 font-[Playfair_Display] text-5xl font-bold text-white sm:text-6xl">
-          Sixteen ways to <span className="italic text-primary-glow">build better.</span>
+          Interior Design & Construction <span className="italic text-primary-glow">Services in Tirunelveli.</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mx-auto mt-5 max-w-2xl text-lg text-white/90">
-          Every speciality you might need to take a project from raw site to handover — under a single, accountable studio.
+          Sixteen specialised disciplines serving Tirunelveli, Palayamkottai, Nagercoil and all of Tamil Nadu — under a single, accountable studio.
         </motion.p>
       </div>
     </section>

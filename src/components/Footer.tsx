@@ -57,13 +57,19 @@ export function Footer() {
               <MapPinIcon className="h-4 w-4 mt-0.5 shrink-0 text-primary-glow" />
               <span>No.184-A, Ganapathiyapuram Street, Seevalaperi Main Road, Palayamkottai</span>
             </a>
-            <p className="mt-4 text-xs uppercase tracking-widest text-white/60">Serving all over India</p>
+            <p className="mt-4 text-xs uppercase tracking-widest text-white/60">Serving all Tamil Nadu — Tirunelveli · Nagercoil · Madurai · Chennai</p>
           </div>
         </div>
 
         <div className="mt-12 border-t border-white/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Sky Nest Constructions. All rights reserved.</p>
-          <p>Designed for craftsmanship · 16+ years of expertise</p>
+          <p>Interior Design & Construction · Tirunelveli · Tamil Nadu · 16+ years expertise</p>
+        </div>
+
+        <div className="mt-4 border-t border-white/10 pt-4 text-[11px] text-white/40 text-center leading-relaxed">
+          Sky Nest Constructions — Interior Designer & Construction Company in Palayamkottai, Tirunelveli, Tamil Nadu.
+          Serving Tirunelveli · Palayamkottai · Nagercoil · Tenkasi · Thoothukudi · Madurai · Coimbatore · Chennai & all Tamil Nadu.
+          Services: Modular Kitchen · Wardrobe · False Ceiling · 3D Design · Home Renovation · Office Interiors · PVC Panels · Wood Works
         </div>
       </div>
     </footer>
