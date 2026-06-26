@@ -80,6 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#0F172A" },
       { name: "robots", content: "index, follow" },
+      { name: "google-site-verification", content: "bfp_i_XnnSUNQDznxQlxKdps23qiy6Ulbuxszvqujcw" },
       { property: "og:site_name", content: "Sky Nest Constructions" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
