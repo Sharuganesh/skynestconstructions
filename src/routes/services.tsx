@@ -7,13 +7,13 @@ import { services } from "@/lib/site-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Interior Design & Construction Services in Tirunelveli, Tamil Nadu | Sky Nest" },
-      { name: "description", content: "16 specialised interior design & construction services in Tirunelveli & Tamil Nadu: modular kitchen, wardrobe, false ceiling, 3D design, home renovation, office interiors, PVC panels, wood works, electrical & plumbing. Free consultation." },
-      { property: "og:title", content: "Interior Design Services in Tirunelveli | Sky Nest Constructions" },
-      { property: "og:description", content: "16 services under one roof: modular kitchen, wardrobe, false ceiling, renovation & more across Tamil Nadu." },
+      { title: "Interior Design & Construction Services in India | Sky Nest" },
+      { name: "description", content: "16 specialised interior design & construction services across India from our Tirunelveli base: modular kitchen, wardrobe, false ceiling, 3D design, home renovation, office interiors, PVC panels, wood works, electrical & plumbing. Free consultation." },
+      { property: "og:title", content: "Interior Design Services in India | Sky Nest Constructions" },
+      { property: "og:description", content: "16 services under one roof: modular kitchen, wardrobe, false ceiling, renovation & more delivered across India." },
       { property: "og:url", content: "https://skynestconstructions.in/services" },
       { property: "og:type", content: "website" },
-      { name: "keywords", content: "modular kitchen tirunelveli, wardrobe design tirunelveli, false ceiling tirunelveli, interior design services tamil nadu, home renovation tirunelveli, 3d interior design tirunelveli, office interior designer tirunelveli, pvc interiors tirunelveli, wood works tirunelveli, electrical contractor tirunelveli" },
+      { name: "keywords", content: "modular kitchen india, wardrobe design india, false ceiling india, interior design services india, home renovation india, 3d interior design india, office interior designer india, pvc interiors india, wood works india, electrical contractor india" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/services" }],
     scripts: [
@@ -101,12 +101,12 @@ function Hero() {
       <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-primary-glow/30 blur-3xl" />
       <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-5 text-center lg:px-8">
-        <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-xs uppercase tracking-[0.3em] text-primary-glow">Services in Tirunelveli & Tamil Nadu</motion.span>
+        <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-xs uppercase tracking-[0.3em] text-primary-glow">Services across India</motion.span>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="mt-4 font-[Playfair_Display] text-5xl font-bold text-white sm:text-6xl">
-          Interior Design & Construction <span className="italic text-primary-glow">Services in Tirunelveli.</span>
+          Interior Design & Construction <span className="italic text-primary-glow">Services in India.</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mx-auto mt-5 max-w-2xl text-lg text-white/90">
-          Sixteen specialised disciplines serving Tirunelveli, Palayamkottai, Nagercoil and all of Tamil Nadu — under a single, accountable studio.
+          Sixteen specialised disciplines delivered across India from our base in Tirunelveli — under a single, accountable studio.
         </motion.p>
       </div>
     </section>

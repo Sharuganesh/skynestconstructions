@@ -8,12 +8,12 @@ import { PhoneIcon, GmailIcon, WhatsAppIcon, MapPinIcon } from "@/components/Bra
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Sky Nest Constructions | Free Interior Design Consultation in Tirunelveli" },
-      { name: "description", content: "Contact Sky Nest Constructions, Palayamkottai, Tirunelveli. Get a free interior design or construction consultation. Call +91 87787 58472 or WhatsApp. 24/7 availability across Tamil Nadu." },
-      { property: "og:title", content: "Contact Sky Nest Constructions — Tirunelveli" },
-      { property: "og:description", content: "Free interior design consultation in Tirunelveli. Call or WhatsApp +91 87787 58472. 24/7. Serving Tamil Nadu." },
+      { title: "Contact Sky Nest Constructions | Free Interior Design Consultation in India" },
+      { name: "description", content: "Contact Sky Nest Constructions for a free interior design or construction consultation across India. Call +91 87787 58472 or WhatsApp. 24/7 availability from our Tirunelveli base." },
+      { property: "og:title", content: "Contact Sky Nest Constructions — India" },
+      { property: "og:description", content: "Free interior design consultation across India. Call or WhatsApp +91 87787 58472. 24/7. Serving homes and businesses nationwide." },
       { property: "og:url", content: "https://skynestconstructions.in/contact" },
-      { name: "keywords", content: "sky nest constructions contact, interior designer tirunelveli phone number, free interior design consultation tirunelveli, interior designer palayamkottai" },
+      { name: "keywords", content: "sky nest constructions contact, interior design consultation india, free interior design consultation india, interior designer pan india" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/contact" }],
     scripts: [
@@ -42,10 +42,10 @@ function ContactPage() {
         <div className="relative mx-auto max-w-7xl px-5 text-center lg:px-8">
           <span className="text-xs uppercase tracking-[0.3em] text-primary-glow">Contact</span>
           <h1 className="mt-4 font-[Playfair_Display] text-5xl font-bold text-white sm:text-6xl">
-            Contact Us in <span className="italic text-primary-glow">Tirunelveli.</span>
+            Contact Sky Nest <span className="italic text-primary-glow">across India.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-white/90">
-            Visit our studio at Palayamkottai or reach us by call, WhatsApp or email. Free consultation for all projects across Tamil Nadu. We respond within 24 hours, 365 days a year.
+            Reach out from our Tirunelveli base by call, WhatsApp or email for a free consultation on homes, offices and full-scale construction projects anywhere in India. We respond within 24 hours, 365 days a year.
           </p>
         </div>
       </section>

@@ -8,12 +8,12 @@ import { ArrowRight, X } from "lucide-react";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Interior Design Portfolio — Projects in Tirunelveli & Tamil Nadu | Sky Nest" },
-      { name: "description", content: "View Sky Nest Constructions' portfolio of completed interior design and construction projects in Tirunelveli, Palayamkottai and Tamil Nadu — modular kitchens, bedrooms, offices, living rooms and more." },
-      { property: "og:title", content: "Sky Nest Portfolio — Interior Projects in Tirunelveli, Tamil Nadu" },
-      { property: "og:description", content: "Real handovers. Modular kitchens, bedrooms, offices, commercial interiors delivered across Tirunelveli & Tamil Nadu." },
+      { title: "Interior Design Portfolio — Projects Across India | Sky Nest" },
+      { name: "description", content: "View Sky Nest Constructions' portfolio of completed interior design and construction projects across India — modular kitchens, bedrooms, offices, living rooms and more." },
+      { property: "og:title", content: "Sky Nest Portfolio — Interior Projects Across India" },
+      { property: "og:description", content: "Real handovers. Modular kitchens, bedrooms, offices, commercial interiors delivered across India from our Tirunelveli base." },
       { property: "og:url", content: "https://skynestconstructions.in/portfolio" },
-      { name: "keywords", content: "interior design portfolio tirunelveli, modular kitchen portfolio tamil nadu, home interior design photos tirunelveli, interior design before after tirunelveli" },
+      { name: "keywords", content: "interior design portfolio india, modular kitchen portfolio india, home interior design photos india, interior design before after india" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/portfolio" }],
     scripts: [

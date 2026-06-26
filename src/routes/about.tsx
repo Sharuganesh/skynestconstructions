@@ -7,12 +7,12 @@ import { SiteLayout } from "@/components/SiteLayout";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Sky Nest Constructions — Interior Design Company in Tirunelveli, Tamil Nadu" },
-      { name: "description", content: "Sky Nest Constructions was founded in 2021 by Arunraj Krishnan in Palayamkottai, Tirunelveli. Discover our story, values and how we became Tamil Nadu's trusted interior design and construction company." },
-      { property: "og:title", content: "About Sky Nest Constructions — Tirunelveli Interior Designers" },
-      { property: "og:description", content: "Founded in Palayamkottai by Arunraj Krishnan. 16+ years expertise, 120+ clients, serving all Tamil Nadu." },
+      { title: "About Sky Nest Constructions — Premium Interior Design Company in India" },
+      { name: "description", content: "Sky Nest Constructions was founded in 2021 by Arunraj Krishnan with a base in Tirunelveli. Discover our story, values and how we became a trusted interior design and construction company across India." },
+      { property: "og:title", content: "About Sky Nest Constructions — Premium Interior Designers in India" },
+      { property: "og:description", content: "Founded with a base in Tirunelveli. 16+ years expertise, 120+ clients, serving homes and businesses across India." },
       { property: "og:url", content: "https://skynestconstructions.in/about" },
-      { name: "keywords", content: "sky nest constructions tirunelveli, interior design company palayamkottai, arunraj krishnan interior designer, best construction company tirunelveli, interior designer tamil nadu" },
+      { name: "keywords", content: "sky nest constructions india, interior design company india, arunraj krishnan interior designer, best construction company india, interior designer pan india" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/about" }],
     scripts: [
@@ -101,10 +101,10 @@ function Story() {
           <span className="text-xs uppercase tracking-[0.3em] text-primary">Who we are</span>
           <h2 className="mt-3 font-[Playfair_Display] text-4xl font-bold sm:text-5xl">Craft + engineering, under one roof.</h2>
           <p className="mt-6 text-base text-muted-foreground sm:text-lg">
-            Sky Nest Constructions was founded in 2021 by <strong className="text-foreground">Arunraj Krishnan</strong> in <strong className="text-foreground">Palayamkottai, Tirunelveli</strong> to fix a simple problem in our industry: brilliant concepts let down by inconsistent execution. Today, we are one of Tamil Nadu's most trusted interior design and construction studios.
+            Sky Nest Constructions was founded in 2021 by <strong className="text-foreground">Arunraj Krishnan</strong> with our base in <strong className="text-foreground">Tirunelveli</strong> to fix a simple problem in our industry: brilliant concepts let down by inconsistent execution. Today, we are one of India’s most trusted interior design and construction studios.
           </p>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            With 16+ years of collective expertise, we work across construction and 16 interior specialities — from modular kitchens and wardrobes to commercial fit-outs and full-scope renovations. We serve clients across Tirunelveli, Palayamkottai, Nagercoil, Tenkasi, Thoothukudi, Madurai, Coimbatore, and Chennai.
+            With 16+ years of collective expertise, we work across construction and 16 interior specialities — from modular kitchens and wardrobes to commercial fit-outs and full-scope renovations. We serve clients across India, with strong delivery roots in Tirunelveli and Pan-India project support.
           </p>
           <div className="mt-8 grid grid-cols-3 gap-4">
             {[

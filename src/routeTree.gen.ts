@@ -13,9 +13,12 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as InteriorDesignerTirunelveliRouteImport } from './routes/interior-designer-tirunelveli'
+import { Route as InteriorDesignerPalayamkottaiRouteImport } from './routes/interior-designer-palayamkottai'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesWardrobeDesignRouteImport } from './routes/services/wardrobe-design'
+import { Route as ServicesModularKitchenRouteImport } from './routes/services/modular-kitchen'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -38,6 +41,12 @@ const InteriorDesignerTirunelveliRoute =
     path: '/interior-designer-tirunelveli',
     getParentRoute: () => rootRouteImport,
   } as any)
+const InteriorDesignerPalayamkottaiRoute =
+  InteriorDesignerPalayamkottaiRouteImport.update({
+    id: '/interior-designer-palayamkottai',
+    path: '/interior-designer-palayamkottai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -53,34 +62,53 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesWardrobeDesignRoute = ServicesWardrobeDesignRouteImport.update({
+  id: '/wardrobe-design',
+  path: '/wardrobe-design',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesModularKitchenRoute = ServicesModularKitchenRouteImport.update({
+  id: '/modular-kitchen',
+  path: '/modular-kitchen',
+  getParentRoute: () => ServicesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/interior-designer-palayamkottai': typeof InteriorDesignerPalayamkottaiRoute
   '/interior-designer-tirunelveli': typeof InteriorDesignerTirunelveliRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/modular-kitchen': typeof ServicesModularKitchenRoute
+  '/services/wardrobe-design': typeof ServicesWardrobeDesignRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/interior-designer-palayamkottai': typeof InteriorDesignerPalayamkottaiRoute
   '/interior-designer-tirunelveli': typeof InteriorDesignerTirunelveliRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/modular-kitchen': typeof ServicesModularKitchenRoute
+  '/services/wardrobe-design': typeof ServicesWardrobeDesignRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/interior-designer-palayamkottai': typeof InteriorDesignerPalayamkottaiRoute
   '/interior-designer-tirunelveli': typeof InteriorDesignerTirunelveliRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/modular-kitchen': typeof ServicesModularKitchenRoute
+  '/services/wardrobe-design': typeof ServicesWardrobeDesignRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -88,37 +116,47 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/interior-designer-palayamkottai'
     | '/interior-designer-tirunelveli'
     | '/portfolio'
     | '/services'
     | '/sitemap.xml'
+    | '/services/modular-kitchen'
+    | '/services/wardrobe-design'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
+    | '/interior-designer-palayamkottai'
     | '/interior-designer-tirunelveli'
     | '/portfolio'
     | '/services'
     | '/sitemap.xml'
+    | '/services/modular-kitchen'
+    | '/services/wardrobe-design'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
+    | '/interior-designer-palayamkottai'
     | '/interior-designer-tirunelveli'
     | '/portfolio'
     | '/services'
     | '/sitemap.xml'
+    | '/services/modular-kitchen'
+    | '/services/wardrobe-design'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  InteriorDesignerPalayamkottaiRoute: typeof InteriorDesignerPalayamkottaiRoute
   InteriorDesignerTirunelveliRoute: typeof InteriorDesignerTirunelveliRoute
   PortfolioRoute: typeof PortfolioRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -152,6 +190,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InteriorDesignerTirunelveliRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/interior-designer-palayamkottai': {
+      id: '/interior-designer-palayamkottai'
+      path: '/interior-designer-palayamkottai'
+      fullPath: '/interior-designer-palayamkottai'
+      preLoaderRoute: typeof InteriorDesignerPalayamkottaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -173,16 +218,45 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/wardrobe-design': {
+      id: '/services/wardrobe-design'
+      path: '/wardrobe-design'
+      fullPath: '/services/wardrobe-design'
+      preLoaderRoute: typeof ServicesWardrobeDesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/modular-kitchen': {
+      id: '/services/modular-kitchen'
+      path: '/modular-kitchen'
+      fullPath: '/services/modular-kitchen'
+      preLoaderRoute: typeof ServicesModularKitchenRouteImport
+      parentRoute: typeof ServicesRoute
+    }
   }
 }
+
+interface ServicesRouteChildren {
+  ServicesModularKitchenRoute: typeof ServicesModularKitchenRoute
+  ServicesWardrobeDesignRoute: typeof ServicesWardrobeDesignRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesModularKitchenRoute: ServicesModularKitchenRoute,
+  ServicesWardrobeDesignRoute: ServicesWardrobeDesignRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  InteriorDesignerPalayamkottaiRoute: InteriorDesignerPalayamkottaiRoute,
   InteriorDesignerTirunelveliRoute: InteriorDesignerTirunelveliRoute,
   PortfolioRoute: PortfolioRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport

@@ -9,17 +9,17 @@ import { services, portfolio, testimonials } from "@/lib/site-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Best Interior Designer & Construction Company in Tirunelveli | Sky Nest Constructions" },
-      { name: "description", content: "Sky Nest Constructions — #1 interior design & construction company in Tirunelveli, Palayamkottai & all Tamil Nadu. Modular kitchens, wardrobes, false ceilings, 3D design, home renovation. Free consultation. Call +91 87787 58472." },
-      { property: "og:title", content: "Best Interior Designer in Tirunelveli | Sky Nest Constructions" },
-      { property: "og:description", content: "Premium interior design & construction in Tirunelveli & Tamil Nadu. Modular kitchens, wardrobes, 3D design, renovation. 120+ happy clients. Free consultation." },
+      { title: "Best Interior Design & Construction Company in India | Sky Nest Constructions" },
+      { name: "description", content: "Sky Nest Constructions delivers premium interior design and construction across India from our base in Tirunelveli. Modular kitchens, wardrobes, false ceilings, 3D design, home renovation and full-site execution. Free consultation. Call +91 87787 58472." },
+      { property: "og:title", content: "Best Interior Design & Construction Company in India | Sky Nest Constructions" },
+      { property: "og:description", content: "Premium interior design & construction across India from our base in Tirunelveli. Modular kitchens, wardrobes, 3D design, renovation and turnkey execution. Free consultation." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://skynestconstructions.in/" },
       { property: "og:image", content: "https://skynestconstructions.in/og-home.jpg" },
       { name: "twitter:image", content: "https://skynestconstructions.in/og-home.jpg" },
-      { name: "twitter:title", content: "Best Interior Designer in Tirunelveli | Sky Nest Constructions" },
-      { name: "twitter:description", content: "Premium construction & interior design across Tirunelveli & Tamil Nadu. 120+ happy clients. Free consultation." },
-      { name: "keywords", content: "interior designer tirunelveli, interior design palayamkottai, modular kitchen tirunelveli, construction company tirunelveli, home renovation tirunelveli, false ceiling tirunelveli, 3d interior design tirunelveli, wardrobe design tirunelveli, best interior designer tamil nadu, sky nest constructions" },
+      { name: "twitter:title", content: "Best Interior Design & Construction Company in India | Sky Nest Constructions" },
+      { name: "twitter:description", content: "Premium construction & interior design across India from our base in Tirunelveli. 120+ happy clients. Free consultation." },
+      { name: "keywords", content: "interior design company india, modular kitchen india, wardrobe design india, false ceiling india, home renovation india, construction company india, best interior designers india, sky nest constructions, interior designer tirunelveli" },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/" }],
     scripts: [
@@ -127,36 +127,36 @@ function Hero() {
       <motion.div style={{ y: y2 }} className="absolute -right-32 top-32 h-96 w-96 rounded-full bg-primary-glow/30 blur-3xl" />
       <motion.div style={{ y: y1 }} className="absolute -left-20 bottom-10 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
 
-      <motion.div style={{ opacity }} className="relative z-10 mx-auto flex min-h-[100vh] max-w-7xl flex-col items-start justify-center px-5 pt-24 lg:px-8">
+      <motion.div style={{ opacity }} className="relative z-10 mx-auto flex min-h-[100vh] max-w-7xl flex-col items-start justify-center px-5 pb-24 pt-24 lg:px-8">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur"
         >
-          <Sparkles className="h-3.5 w-3.5" /> Since 2021 · 16+ years expertise
+          <Sparkles className="h-3.5 w-3.5" /> Serving India from Tirunelveli · 16+ years expertise
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-6 max-w-4xl text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+          className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] text-white sm:mt-6 sm:text-5xl lg:max-w-4xl lg:text-6xl"
         >
-          Tirunelveli's trusted <span className="text-primary-glow italic">interior designers.</span>
+          Premium interior design & construction <span className="text-primary-glow italic">across India.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-lg text-white/85 sm:text-xl"
+          className="mt-4 max-w-2xl text-base text-white/85 sm:mt-5 sm:text-lg lg:text-xl"
         >
-          Sky Nest Constructions delivers premium home & office interiors across Tirunelveli, Palayamkottai and all of Tamil Nadu — modular kitchens, wardrobes, 3D design, renovation and more.
+          Sky Nest Constructions delivers premium home and office interiors across India from our base in Tirunelveli, with modular kitchens, wardrobes, 3D design, renovation and full-site execution.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-10 flex flex-wrap gap-4"
+          className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4"
         >
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-4 font-semibold text-primary-foreground shadow-elegant transition hover:scale-105">
             Book Free Consultation <ArrowRight className="h-4 w-4" />

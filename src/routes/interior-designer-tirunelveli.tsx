@@ -7,11 +7,11 @@ import { services } from "@/lib/site-data";
 export const Route = createFileRoute("/interior-designer-tirunelveli")({
   head: () => ({
     meta: [
-      { title: "Interior Designer in Tirunelveli | Sky Nest Constructions — Free Consultation" },
-      { name: "description", content: "Looking for an interior designer in Tirunelveli? Sky Nest Constructions offers premium home and office interior design in Tirunelveli & Palayamkottai. Modular kitchen, wardrobe, false ceiling, 3D design. Free consultation. Call +91 87787 58472." },
-      { name: "keywords", content: "interior designer tirunelveli, interior design tirunelveli, best interior designer tirunelveli, home interior tirunelveli, interior design company tirunelveli, sky nest constructions" },
-      { property: "og:title", content: "Best Interior Designer in Tirunelveli | Sky Nest Constructions" },
-      { property: "og:description", content: "Premium interior design in Tirunelveli — modular kitchens, wardrobes, 3D design & more. Free consultation. 120+ happy clients." },
+      { title: "Interior Designer in India | Sky Nest Constructions — Free Consultation" },
+      { name: "description", content: "Looking for an interior designer in India? Sky Nest Constructions offers premium home and office interior design across India from our base in Tirunelveli. Modular kitchen, wardrobe, false ceiling, 3D design. Free consultation. Call +91 87787 58472." },
+      { name: "keywords", content: "interior designer india, interior design india, best interior designer india, home interior india, interior design company india, sky nest constructions" },
+      { property: "og:title", content: "Best Interior Designer in India | Sky Nest Constructions" },
+      { property: "og:description", content: "Premium interior design across India — modular kitchens, wardrobes, 3D design & more. Free consultation. 120+ happy clients." },
       { property: "og:url", content: "https://skynestconstructions.in/interior-designer-tirunelveli" },
       { property: "og:type", content: "website" },
     ],
@@ -92,12 +92,12 @@ function Hero() {
       <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-primary-glow/30 blur-3xl" />
       <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-5 text-center lg:px-8">
-        <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-xs uppercase tracking-[0.3em] text-primary-glow">Tirunelveli</motion.span>
+        <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-xs uppercase tracking-[0.3em] text-primary-glow">India</motion.span>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="mt-4 font-[Playfair_Display] text-5xl font-bold text-white sm:text-6xl">
-          Interior Designer in <span className="italic text-primary-glow">Tirunelveli.</span>
+          Interior Designer <span className="italic text-primary-glow">across India.</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mx-auto mt-5 max-w-2xl text-lg text-white/90">
-          Sky Nest Constructions — Tirunelveli's most trusted interior design and construction studio. Based in Palayamkottai, serving all of Tirunelveli district and Tamil Nadu.
+          Sky Nest Constructions — a trusted interior design and construction studio based in Tirunelveli, delivering premium projects across India.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-wrap justify-center gap-4">
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 font-semibold text-primary-deep transition hover:scale-105">
@@ -123,9 +123,9 @@ function WhyChoose() {
   ];
   return (
     <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
-      <h2 className="font-[Playfair_Display] text-4xl font-bold text-center">Why choose Sky Nest as your interior designer in Tirunelveli?</h2>
+      <h2 className="font-[Playfair_Display] text-4xl font-bold text-center">Why choose Sky Nest as your interior designer in India?</h2>
       <p className="mt-4 text-center text-muted-foreground max-w-3xl mx-auto">
-        We are a Tirunelveli-based interior design studio with a local understanding of Tamil Nadu homeowners' needs — from traditional Chettinad-inspired details to contemporary minimalism. With 120+ completed projects in Tirunelveli, Palayamkottai, Nagercoil and surrounding areas, we are the most experienced choice for your home or commercial space.
+        We are a Tirunelveli-based interior design studio with a strong understanding of Indian homes and commercial spaces — from traditional details to contemporary minimalism. With 120+ completed projects across India, we are the most experienced choice for your home or commercial space.
       </p>
 
       <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -147,9 +147,9 @@ function Services() {
   const featured = services.slice(0, 6);
   return (
     <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
-      <h2 className="font-[Playfair_Display] text-4xl font-bold text-center">Services We Offer in Tirunelveli</h2>
+      <h2 className="font-[Playfair_Display] text-4xl font-bold text-center">Services We Offer Across India</h2>
       <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-        From modular kitchens to full-home renovations, we offer 16 specialised services for homes and businesses in Tirunelveli.
+        From modular kitchens to full-home renovations, we offer 16 specialised services for homes and businesses across India.
       </p>
       <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {featured.map((s) => (
@@ -193,7 +193,7 @@ function FAQ() {
   return (
     <section className="bg-secondary py-20">
       <div className="mx-auto max-w-4xl px-5 lg:px-8">
-        <h2 className="font-[Playfair_Display] text-3xl font-bold text-center">Interior Design FAQs — Tirunelveli</h2>
+        <h2 className="font-[Playfair_Display] text-3xl font-bold text-center">Interior Design FAQs — India</h2>
         <div className="mt-10 space-y-6">
           {faqs.map(({ q, a }) => (
             <details key={q} className="rounded-2xl bg-card p-6 shadow-soft open:ring-1 open:ring-primary/20">
@@ -210,7 +210,7 @@ function FAQ() {
 function CTA() {
   return (
     <section className="mx-auto max-w-5xl px-5 py-20 text-center">
-      <h2 className="font-[Playfair_Display] text-4xl font-bold">Ready to design your Tirunelveli home?</h2>
+      <h2 className="font-[Playfair_Display] text-4xl font-bold">Ready to design your dream space in India?</h2>
       <p className="mt-4 text-muted-foreground text-lg">Free consultation · 3D visualisation · Transparent pricing · On-time delivery</p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-4 font-semibold text-primary-foreground shadow-elegant transition hover:scale-105">
