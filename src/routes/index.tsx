@@ -109,7 +109,8 @@ function Hero() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 600], [0, 160]);
   const y2 = useTransform(scrollY, [0, 600], [0, -120]);
-  const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+  const contentY = useTransform(scrollY, [0, 500], [0, 60]);
+  const opacity = useTransform(scrollY, [0, 240, 500], [1, 1, 0.45]);
 
   return (
     <section ref={ref} className="relative min-h-[100vh] overflow-hidden">
@@ -127,15 +128,18 @@ function Hero() {
       <motion.div style={{ y: y2 }} className="absolute -right-32 top-32 h-96 w-96 rounded-full bg-primary-glow/30 blur-3xl" />
       <motion.div style={{ y: y1 }} className="absolute -left-20 bottom-10 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
 
-      <motion.div style={{ opacity }} className="relative z-10 mx-auto flex min-h-[100vh] max-w-7xl flex-col items-start justify-center px-5 pb-24 pt-24 lg:px-8">
-        <motion.span
+      <motion.div style={{ y: contentY, opacity }} className="relative z-10 mx-auto flex min-h-[100vh] max-w-7xl flex-col items-start justify-center px-5 pb-24 pt-24 lg:px-8">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur"
+          className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white shadow-soft backdrop-blur sm:px-4 sm:py-2.5"
         >
-          <Sparkles className="h-3.5 w-3.5" /> Premium Interior & Construction Delivery Across India
-        </motion.span>
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-300/15 text-amber-200 shadow-lg shadow-black/20">
+            <Sparkles className="h-4 w-4" />
+          </span>
+          Certified Pan-India Delivery
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -153,10 +157,10 @@ function Hero() {
         >
           Award-winning interiors and turnkey construction delivered across every Indian city — from modular kitchens and wardrobes to 3D design, renovation and full-site execution.
         </motion.p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           {[
             {
-              label: "Central Government Certified Engineer",
+              label: "Central Govt Certified Engineer",
               accent: "bg-gradient-to-br from-sky-500 via-cyan-500 to-indigo-600",
               icon: Award,
             },
@@ -166,7 +170,7 @@ function Hero() {
               icon: ShieldCheck,
             },
             {
-              label: "Complete Plan Approval Assistance",
+              label: "Plan Approval Assistance",
               accent: "bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-500",
               icon: CheckCircle2,
             },
@@ -175,14 +179,12 @@ function Hero() {
             return (
               <div
                 key={item.label}
-                className="group rounded-full border border-white/15 bg-white/10 px-3 py-2 text-[0.72rem] font-semibold text-white shadow-soft backdrop-blur transition hover:-translate-y-0.5 hover:shadow-elegant sm:px-4 sm:py-2.5 sm:text-sm"
+                className="group flex w-full max-w-[21rem] items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-3 py-2 text-[0.72rem] font-semibold text-white shadow-soft backdrop-blur transition hover:-translate-y-0.5 hover:shadow-elegant sm:px-4 sm:py-2.5 sm:text-sm"
               >
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <span className={`${item.accent} inline-flex h-8 w-8 items-center justify-center rounded-full text-white shadow-lg shadow-black/20 sm:h-8 sm:w-8`}>
-                    <Icon className="h-4 w-4" />
-                  </span>
-                  <span className="max-w-[10rem] leading-tight sm:max-w-none">{item.label}</span>
-                </div>
+                <span className={`${item.accent} inline-flex h-10 w-10 items-center justify-center rounded-2xl text-white shadow-lg shadow-black/20`}>
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span className="max-w-[10rem] leading-tight sm:max-w-none">{item.label}</span>
               </div>
             );
           })}
@@ -196,15 +198,20 @@ function Hero() {
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-4 font-semibold text-primary-foreground shadow-elegant transition hover:scale-105">
             Book Free Consultation <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/20">
+          <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/60 bg-white/20 px-7 py-4 font-semibold text-white shadow-[0_20px_60px_-30px_rgba(255,255,255,0.9)] backdrop-blur transition hover:bg-white/30 hover:text-slate-950">
             View Portfolio
           </Link>
         </motion.div>
       </motion.div>
 
-      <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/70 text-xs uppercase tracking-[0.3em]">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", repeat: Infinity, repeatType: "reverse", repeatDelay: 1.8 }}
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/80 text-xs uppercase tracking-[0.3em]"
+      >
         Scroll to explore
-      </div>
+      </motion.div>
     </section>
   );
 }
