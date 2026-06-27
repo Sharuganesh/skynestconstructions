@@ -140,17 +140,17 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] text-white sm:mt-6 sm:text-5xl lg:max-w-4xl lg:text-6xl"
+          className="mt-5 max-w-3xl text-balance text-4xl font-bold leading-[1.08] text-white sm:mt-6 sm:text-5xl lg:max-w-4xl lg:text-6xl"
         >
-          Premium interior design & construction <span className="text-primary-glow italic">across India.</span>
+          Building India's finest homes &amp; offices — <span className="text-primary-glow italic">end to end.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-4 max-w-2xl text-base text-white/85 sm:mt-5 sm:text-lg lg:text-xl"
+          className="mt-4 max-w-2xl text-pretty text-base text-white/85 sm:mt-5 sm:text-lg lg:text-xl"
         >
-          Sky Nest Constructions delivers premium home and office interiors across India from our base in Tirunelveli, with modular kitchens, wardrobes, 3D design, renovation and full-site execution.
+          Award-winning interiors and turnkey construction delivered across every Indian city — from modular kitchens and wardrobes to 3D design, renovation and full-site execution.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
