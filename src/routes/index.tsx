@@ -193,9 +193,9 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4"
+          className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:items-center sm:gap-4"
         >
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-4 font-semibold text-primary-foreground shadow-elegant transition hover:scale-105">
+          <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-7 py-4 font-semibold text-primary-foreground shadow-elegant transition hover:scale-105 sm:justify-start">
             Book Free Consultation <ArrowRight className="h-4 w-4" />
           </Link>
           <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/60 bg-white/20 px-7 py-4 font-semibold text-white shadow-[0_20px_60px_-30px_rgba(255,255,255,0.9)] backdrop-blur transition hover:bg-white/30 hover:text-slate-950">

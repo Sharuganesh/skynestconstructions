@@ -94,6 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "revisit-after", content: "7 days" },
     ],
     links: [
+      { rel: "icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
         href: appCss,
@@ -228,6 +229,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                   reviewBody: "Honest pricing, master craftsmanship and zero compromise on quality. Truly worthy of 'Build with Trust'.",
                 },
               ],
+              sameAs: [
+                "https://www.google.com/maps?q=Sky+Nest+Constructions+Palayamkottai",
+                "https://wa.me/918778758472",
+              ],
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://skynestconstructions.in/#organization",
+              name: "Sky Nest Constructions",
+              url: "https://skynestconstructions.in",
+              logo: "https://skynestconstructions.in/skynest-logo.png",
               sameAs: [
                 "https://www.google.com/maps?q=Sky+Nest+Constructions+Palayamkottai",
                 "https://wa.me/918778758472",
