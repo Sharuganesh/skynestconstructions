@@ -140,9 +140,10 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-5 max-w-3xl text-balance text-4xl font-bold leading-[1.08] text-white sm:mt-6 sm:text-5xl lg:max-w-4xl lg:text-6xl"
+          className="mt-5 max-w-[18ch] text-balance text-[2rem] font-bold leading-[1.1] tracking-tight text-white sm:mt-6 sm:max-w-2xl sm:text-5xl sm:leading-[1.05] lg:max-w-4xl lg:text-6xl"
         >
-          Building India's finest homes &amp; offices — <span className="text-primary-glow italic">end to end.</span>
+          Building India&rsquo;s finest homes &amp; offices,{" "}
+          <span className="whitespace-nowrap text-primary-glow italic">end&nbsp;to&nbsp;end.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
