@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Interior Design & Construction Services in India | Sky Nest" },
-      { name: "description", content: "16 specialised interior design & construction services across India from our Tirunelveli base: modular kitchen, wardrobe, false ceiling, 3D design, home renovation, office interiors, PVC panels, wood works, electrical & plumbing. Free consultation." },
+      { name: "description", content: "16 specialised interior design & construction services across India with certified engineering support, plan approval assistance, and end-to-end execution: modular kitchen, wardrobe, false ceiling, 3D design, home renovation, office interiors, PVC panels, wood works, electrical & plumbing. Free consultation." },
       { property: "og:title", content: "Interior Design Services in India | Sky Nest Constructions" },
       { property: "og:description", content: "16 services under one roof: modular kitchen, wardrobe, false ceiling, renovation & more delivered across India." },
       { property: "og:url", content: "https://skynestconstructions.in/services" },
@@ -38,18 +38,18 @@ export const Route = createFileRoute("/services")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "What is the cost of a modular kitchen in Tirunelveli?",
+              name: "What is the cost of a modular kitchen in India?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Modular kitchen cost in Tirunelveli depends on layout, material, and size. At Sky Nest Constructions, a standard modular kitchen starts from approximately ₹1.5 lakhs. Contact us at +91 87787 58472 for a free, itemised quote.",
+                text: "Modular kitchen cost across India depends on layout, material, and size. At Sky Nest Constructions, a standard modular kitchen starts from approximately ₹1.5 lakhs. Contact us at +91 87787 58472 for a free, itemised quote.",
               },
             },
             {
               "@type": "Question",
-              name: "Do you offer 3D interior design in Tirunelveli?",
+              name: "Do you offer 3D interior design across India?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes, Sky Nest Constructions provides photo-realistic 3D interior design visualisation for all projects in Tirunelveli and across Tamil Nadu, before any physical work begins, so clients can approve the design fully.",
+                text: "Yes, Sky Nest Constructions provides photo-realistic 3D interior design visualisation for all projects across India before any physical work begins, so clients can approve the design fully.",
               },
             },
             {
@@ -62,10 +62,10 @@ export const Route = createFileRoute("/services")({
             },
             {
               "@type": "Question",
-              name: "Do you do false ceiling work in Tirunelveli?",
+              name: "Do you do false ceiling work across India?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. Sky Nest Constructions designs and installs false ceilings with integrated cove and accent lighting across Tirunelveli, Palayamkottai, Nagercoil, and all Tamil Nadu districts.",
+                text: "Yes. Sky Nest Constructions designs and installs false ceilings with integrated cove and accent lighting across India for homes, villas, offices and commercial spaces.",
               },
             },
             {
@@ -73,7 +73,7 @@ export const Route = createFileRoute("/services")({
               name: "What types of wardrobe design do you offer?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sky Nest Constructions offers sliding, hinged, and walk-in wardrobe designs in wood, MDF, and PVC finishes, custom-built to maximize space for homes in Tirunelveli and Tamil Nadu.",
+                text: "Sky Nest Constructions offers sliding, hinged, and walk-in wardrobe designs in wood, MDF, and PVC finishes, custom-built to maximize space for homes across India.",
               },
             },
           ],
@@ -106,7 +106,7 @@ function Hero() {
           Interior Design & Construction <span className="italic text-primary-glow">Services in India.</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mx-auto mt-5 max-w-2xl text-lg text-white/90">
-          Sixteen specialised disciplines delivered across India from our base in Tirunelveli — under a single, accountable studio.
+          Sixteen specialised disciplines delivered across India with certified engineering support, complete plan approval assistance, and a single accountable studio.
         </motion.p>
       </div>
     </section>

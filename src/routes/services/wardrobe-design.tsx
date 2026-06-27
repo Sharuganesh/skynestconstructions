@@ -5,8 +5,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 export const Route = createFileRoute("/services/wardrobe-design")({
   head: () => ({
     meta: [
-      { title: "Wardrobe Design in Tirunelveli | Sky Nest Constructions" },
-      { name: "description", content: "Custom wardrobe design in Tirunelveli and across India with sliding, hinged and walk-in options. Free consultation and 3D design included." },
+      { title: "Wardrobe Design in India | Sky Nest Constructions" },
+      { name: "description", content: "Custom wardrobe design across India with sliding, hinged and walk-in options. Free consultation and 3D design included." },
     ],
     links: [{ rel: "canonical", href: "https://skynestconstructions.in/services/wardrobe-design" }],
   }),
@@ -17,10 +17,10 @@ function Component() {
   return (
     <SiteLayout>
       <SeoPageLayout
-        title="Wardrobe Design in Tirunelveli"
+        title="Wardrobe Design in India"
         description="Sky Nest Constructions creates custom wardrobes that maximise storage, improve flow and elevate the look of every bedroom and dressing area."
-        h1="Wardrobe Design in Tirunelveli"
-        intro="We design sliding wardrobes, hinged wardrobes, walk-in wardrobes and dressing units for modern homes and luxury residences across Tirunelveli and India."
+        h1="Wardrobe Design in India"
+        intro="We design sliding wardrobes, hinged wardrobes, walk-in wardrobes and dressing units for modern homes and luxury residences across India."
         bullets={[
           "Space-saving design with tailored storage compartments",
           "Premium wood, laminate, PVC and mirror finish options",

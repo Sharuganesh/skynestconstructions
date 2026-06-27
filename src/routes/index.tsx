@@ -134,7 +134,7 @@ function Hero() {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur"
         >
-          <Sparkles className="h-3.5 w-3.5" /> Serving India from Tirunelveli · 16+ years expertise
+          <Sparkles className="h-3.5 w-3.5" /> Central Government Certified Engineer · Serving All Over India
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -153,6 +153,22 @@ function Hero() {
         >
           Award-winning interiors and turnkey construction delivered across every Indian city — from modular kitchens and wardrobes to 3D design, renovation and full-site execution.
         </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
+          className="mt-6 flex flex-wrap gap-3"
+        >
+          {[
+            "Central Government Certified Engineer",
+            "Serving All Over India",
+            "Complete Plan Approval Assistance",
+          ].map((item) => (
+            <div key={item} className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+              {item}
+            </div>
+          ))}
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
