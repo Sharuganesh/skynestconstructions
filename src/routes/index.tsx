@@ -134,7 +134,7 @@ function Hero() {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur"
         >
-          <Sparkles className="h-3.5 w-3.5" /> Central Government Certified Engineer · Serving All Over India
+          <Sparkles className="h-3.5 w-3.5" /> Premium Interior & Construction Delivery Across India
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -153,22 +153,40 @@ function Hero() {
         >
           Award-winning interiors and turnkey construction delivered across every Indian city — from modular kitchens and wardrobes to 3D design, renovation and full-site execution.
         </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-6 flex flex-wrap gap-3"
-        >
+        <div className="mt-8 flex flex-wrap gap-4">
           {[
-            "Central Government Certified Engineer",
-            "Serving All Over India",
-            "Complete Plan Approval Assistance",
-          ].map((item) => (
-            <div key={item} className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
-              {item}
-            </div>
-          ))}
-        </motion.div>
+            {
+              label: "Central Government Certified Engineer",
+              accent: "bg-gradient-to-br from-sky-500 via-cyan-500 to-indigo-600",
+              icon: Award,
+            },
+            {
+              label: "Serving All Over India",
+              accent: "bg-gradient-to-br from-emerald-500 via-lime-500 to-teal-500",
+              icon: ShieldCheck,
+            },
+            {
+              label: "Complete Plan Approval Assistance",
+              accent: "bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-500",
+              icon: CheckCircle2,
+            },
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.label}
+                className="group rounded-full border border-white/15 bg-white/10 px-3 py-2 text-[0.72rem] font-semibold text-white shadow-soft backdrop-blur transition hover:-translate-y-0.5 hover:shadow-elegant sm:px-4 sm:py-2.5 sm:text-sm"
+              >
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <span className={`${item.accent} inline-flex h-8 w-8 items-center justify-center rounded-full text-white shadow-lg shadow-black/20 sm:h-8 sm:w-8`}>
+                    <Icon className="h-4 w-4" />
+                  </span>
+                  <span className="max-w-[10rem] leading-tight sm:max-w-none">{item.label}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
