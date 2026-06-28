@@ -128,7 +128,7 @@ function Hero() {
       <motion.div style={{ y: y2 }} className="absolute -right-32 top-32 h-96 w-96 rounded-full bg-primary-glow/30 blur-3xl" />
       <motion.div style={{ y: y1 }} className="absolute -left-20 bottom-10 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
 
-      <motion.div style={{ y: contentY, opacity }} className="relative z-10 mx-auto flex min-h-[100vh] max-w-7xl flex-col items-start justify-center px-5 pb-24 pt-24 lg:px-8">
+      <motion.div style={{ y: contentY, opacity }} className="relative z-10 mx-auto flex min-h-[100vh] max-w-7xl flex-col items-start justify-center px-5 pb-32 pt-24 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -193,12 +193,12 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:items-center sm:gap-4"
+          className="mt-10 flex w-full flex-col gap-4 sm:mt-12 sm:w-auto sm:flex-row sm:items-center sm:gap-5"
         >
-          <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-7 py-4 font-semibold text-primary-foreground shadow-elegant transition hover:scale-105 sm:justify-start">
+          <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-8 py-4 font-semibold text-primary-foreground shadow-elegant transition hover:scale-105 whitespace-nowrap">
             Book Free Consultation <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/60 bg-white/20 px-7 py-4 font-semibold text-white shadow-[0_20px_60px_-30px_rgba(255,255,255,0.9)] backdrop-blur transition hover:bg-white/30 hover:text-slate-950">
+          <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/60 bg-white/20 px-8 py-4 font-semibold text-white shadow-[0_20px_60px_-30px_rgba(255,255,255,0.9)] backdrop-blur transition hover:bg-white/30 hover:text-slate-950 whitespace-nowrap">
             View Portfolio
           </Link>
         </motion.div>
