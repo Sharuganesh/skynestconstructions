@@ -15,8 +15,8 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Premium interior design & construction across India from our base in Tirunelveli. Modular kitchens, wardrobes, 3D design, renovation and turnkey execution. Free consultation." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://skynestconstructions.in/" },
-      { property: "og:image", content: "https://skynestconstructions.in/og-home.jpg" },
-      { name: "twitter:image", content: "https://skynestconstructions.in/og-home.jpg" },
+      { property: "og:image", content: "https://skynestconstructions.in/skynest-logo.png" },
+      { name: "twitter:image", content: "https://skynestconstructions.in/skynest-logo.png" },
       { name: "twitter:title", content: "Best Interior Design & Construction Company in India | Sky Nest Constructions" },
       { name: "twitter:description", content: "Premium construction & interior design across India from our base in Tirunelveli. 120+ happy clients. Free consultation." },
       { name: "keywords", content: "interior design company india, modular kitchen india, wardrobe design india, false ceiling india, home renovation india, construction company india, best interior designers india, sky nest constructions, interior designer tirunelveli" },
@@ -94,10 +94,12 @@ function Index() {
     <SiteLayout>
       <Hero />
       <Stats />
+      <TrustShowcase />
       <FeaturedServices />
       <WhyUs />
       <ParallaxShowcase />
       <PortfolioPreview />
+      <FeaturedHighlights />
       <Testimonials />
       <CTA />
     </SiteLayout>
@@ -120,7 +122,7 @@ function Hero() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center scale-110"
-          style={{ backgroundImage: "url(https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=75)" }}
+          style={{ backgroundImage: "url(/works/buddha-statue-hero.jpeg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-deep/85 via-primary-deep/65 to-background" />
       </motion.div>
@@ -155,7 +157,7 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-4 max-w-2xl text-pretty text-base text-white/85 sm:mt-5 sm:text-lg lg:text-xl"
         >
-          Award-winning interiors and turnkey construction delivered across every Indian city — from modular kitchens and wardrobes to 3D design, renovation and full-site execution.
+          Premium interiors, renovations and turnkey construction delivered across Tamil Nadu and India — from modular kitchens and wardrobes to 3D design, complete-home execution and commercial fit-outs.
         </motion.p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           {[
@@ -165,12 +167,12 @@ function Hero() {
               icon: Award,
             },
             {
-              label: "Serving All Over India",
+              label: "Serving Homes & Businesses Across India",
               accent: "bg-gradient-to-br from-emerald-500 via-lime-500 to-teal-500",
               icon: ShieldCheck,
             },
             {
-              label: "Plan Approval Assistance",
+              label: "Transparent Design-to-Execution Support",
               accent: "bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-500",
               icon: CheckCircle2,
             },
@@ -244,6 +246,34 @@ function Stats() {
             </div>
           </motion.div>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function TrustShowcase() {
+  return (
+    <section className="mx-auto max-w-7xl px-5 pb-8 pt-6 lg:px-8">
+      <div className="overflow-hidden rounded-[2rem] border border-border/60 bg-card shadow-soft lg:grid lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="p-8 sm:p-10 lg:p-12">
+          <span className="text-xs uppercase tracking-[0.3em] text-primary">Trusted by leading brands</span>
+          <h2 className="mt-3 font-[Playfair_Display] text-3xl font-bold text-primary-deep sm:text-4xl">
+            Approved Vendor for Muthoot Fincorp
+          </h2>
+          <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            We are proud to have completed renovation and interior works for Muthoot Fincorp, a milestone that reflects our commitment to quality, discipline and timely delivery.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Renovation Execution</span>
+            <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Premium Finish Standards</span>
+            <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Professional Project Delivery</span>
+            <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Plan Approval Assistance</span>
+            <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Central Govt Certified Engineer</span>
+          </div>
+        </div>
+        <div className="flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary p-6 sm:p-8 lg:p-10">
+          <img src="/works/muthoot-fincorp.jpeg" alt="Muthoot Fincorp renovation project by Sky Nest Constructions" className="h-full w-full rounded-[1.25rem] object-cover shadow-elegant" />
+        </div>
       </div>
     </section>
   );
@@ -344,7 +374,7 @@ function ParallaxShowcase() {
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=2400&q=75)" }}
+          style={{ backgroundImage: "url(/works/philosophy-story.jpg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/80 via-primary-deep/40 to-transparent" />
       </motion.div>
@@ -403,6 +433,49 @@ function PortfolioPreview() {
         <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-soft transition hover:bg-primary-deep">
           Explore full portfolio <ArrowRight className="h-4 w-4" />
         </Link>
+      </div>
+    </section>
+  );
+}
+
+function FeaturedHighlights() {
+  const highlights = [
+    {
+      title: "Premium Balcony Design",
+      caption: "Elegant balcony detailing with premium finishes and city-view comfort.",
+      image: "/works/premium-balcony-design.jpg",
+    },
+    {
+      title: "Modern Duplex Residence",
+      caption: "A striking duplex concept balancing space, light and modern luxury.",
+      image: "/works/modern-duplex-residence.png",
+    },
+  ];
+
+  return (
+    <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+      <SectionHeader
+        eyebrow="Featured projects"
+        title={<>Recent <span className="text-gradient-brand">highlights</span></>}
+        subtitle="Two standout concepts we are proud to showcase alongside our completed homes and commercial interiors."
+      />
+      <div className="mt-14 grid gap-6 md:grid-cols-2">
+        {highlights.map((item, i) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.08 }}
+            className="overflow-hidden rounded-[2rem] bg-card shadow-soft"
+          >
+            <img src={item.image} alt={item.title} loading="lazy" className="h-72 w-full object-cover" />
+            <div className="p-7">
+              <h3 className="font-[Playfair_Display] text-2xl font-semibold text-primary-deep">{item.title}</h3>
+              <p className="mt-3 text-sm text-muted-foreground">{item.caption}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

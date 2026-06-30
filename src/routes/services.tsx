@@ -89,6 +89,7 @@ function ServicesPage() {
     <SiteLayout>
       <Hero />
       <Grid />
+      <FeaturedProjects />
       <Process />
       <CTA />
     </SiteLayout>
@@ -139,6 +140,50 @@ function Grid() {
             </div>
           </motion.div>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function FeaturedProjects() {
+  const highlights = [
+    {
+      title: "Premium Balcony Design",
+      caption: "A refined outdoor retreat with comfort, privacy and premium detailing.",
+      image: "/works/premium-balcony-design.jpg",
+    },
+    {
+      title: "Modern Duplex Residence",
+      caption: "Contemporary duplex architecture designed for modern family living and elevated style.",
+      image: "/works/modern-duplex-residence.png",
+    },
+  ];
+
+  return (
+    <section className="mx-auto max-w-7xl px-5 pb-24 lg:px-8">
+      <div className="rounded-[2rem] border border-border/70 bg-card p-8 shadow-soft sm:p-10">
+        <div className="text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-primary">Project highlights</span>
+          <h2 className="mt-3 font-[Playfair_Display] text-3xl font-bold sm:text-4xl">Signature spaces we are proud to showcase</h2>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {highlights.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="overflow-hidden rounded-[1.5rem] bg-background"
+            >
+              <img src={item.image} alt={item.title} loading="lazy" className="h-60 w-full object-cover" />
+              <div className="p-6">
+                <h3 className="font-[Playfair_Display] text-xl font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{item.caption}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

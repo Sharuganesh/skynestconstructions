@@ -70,7 +70,7 @@ function Hero() {
   return (
     <section className="relative h-[70vh] overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0">
-        <div className="absolute inset-0 bg-cover bg-center scale-110" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=75)" }} />
+        <div className="absolute inset-0 bg-cover bg-center scale-110" style={{ backgroundImage: "url(/works/well-renovation-main.jpg)" }} />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-deep/85 via-primary-deep/60 to-background" />
       </motion.div>
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-5 text-center lg:px-8">
@@ -91,7 +91,7 @@ function Story() {
     <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
-          <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=70" alt="Sky Nest workshop" className="rounded-3xl shadow-elegant" loading="lazy" />
+          <img src="/skynest-logo.png" alt="Sky Nest Constructions logo" className="rounded-3xl shadow-elegant" loading="lazy" />
           <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-card p-6 shadow-elegant sm:block">
             <p className="font-[Playfair_Display] text-4xl font-bold text-primary-deep">2021</p>
             <p className="text-sm text-muted-foreground">Founded in Palayamkottai</p>
