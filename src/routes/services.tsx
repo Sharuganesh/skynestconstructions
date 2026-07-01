@@ -148,6 +148,11 @@ function Grid() {
 function FeaturedProjects() {
   const highlights = [
     {
+      title: "3D Buddha Wall Mural",
+      caption: "A sculptural 3D Buddha wall mural that brings premium depth, calm and artistic drama to any interior.",
+      image: "/works/buddha-real.jpeg",
+    },
+    {
       title: "Premium Balcony Design",
       caption: "A refined outdoor retreat with comfort, privacy and premium detailing.",
       image: "/works/premium-balcony-design.jpg",

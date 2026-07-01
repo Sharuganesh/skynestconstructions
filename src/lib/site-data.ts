@@ -50,14 +50,14 @@ export const portfolio = [
   { title: "Premium Balcony Design", category: "Balcony Design", location: "Tirunelveli", img: "/works/premium-balcony-design.jpg" },
   { title: "Modern Duplex Residence", category: "Duplex Residence", location: "Tirunelveli", img: "/works/modern-duplex-residence.png" },
   { title: "Muthoot Fincorp Renovation", category: "Commercial Interior", location: "Tirunelveli", img: "/works/muthoot-fincorp.jpeg" },
-  { title: "Complete Home Transformation", category: "Complete Home", location: "Tirunelveli", img: "/works/complete-home-main.jpg" },
-  { title: "Premium Interior Styling", category: "Interior Design", location: "Palayamkottai", img: "/works/interior-main.jpg" },
+  { title: "Complete Home Transformation", category: "Complete Home", location: "Tirunelveli", img: "/works/complete-home-transformation.jpg" },
+  { title: "3D Buddha Wall Mural", category: "Special Finish", location: "Tenkasi", img: "/works/buddha-real.jpeg", caption: "A sculptural 3D Buddha wall mural that brings premium depth, calm and artistic drama to any interior." },
+  { title: "Premium Interior Styling", category: "Interior Design", location: "Palayamkottai", img: "/works/premium-interior-styling.jpg" },
   { title: "Corporate Office Fit-Out", category: "Office Interiors", location: "Tirunelveli", img: "/works/aj-disti-main.jpg" },
   { title: "Well Renovation Project", category: "Home Renovation", location: "Tirunelveli", img: "/works/well-renovation-main.jpg" },
   { title: "Luxury Living Room Finish", category: "Living Room Interiors", location: "Palayamkottai", img: "/works/living-room.jpg" },
   { title: "Bespoke Wardrobe Installation", category: "Wardrobe Design", location: "Nagercoil", img: "/works/wardrobe-design.jpg" },
   { title: "Statement Ceiling Design", category: "False Ceiling", location: "Tirunelveli", img: "/works/interior-5.jpg" },
-  { title: "Decorative Stone Finish", category: "Special Finish", location: "Tenkasi", img: "/works/3d-buddha-wall-mural.jpeg" },
 ];
 
 export const testimonials = [

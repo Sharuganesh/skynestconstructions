@@ -100,6 +100,9 @@ function PortfolioPage() {
               <div className="absolute bottom-0 p-5 text-white">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-primary-glow">{p.category}</p>
                 <p className="mt-1 font-[Playfair_Display] text-xl font-semibold">{p.title}</p>
+                {p.caption ? (
+                  <p className="mt-2 text-sm text-white/80 line-clamp-2">{p.caption}</p>
+                ) : null}
               </div>
             </motion.button>
           ))}
